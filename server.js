@@ -109,7 +109,7 @@ mostre na tela os dobros dos números entre o início e o fim
 que são os dobros de [5, 6, 7, 8, 9, 10]
 É OBRIGATÓRIO UTILIZAR A FUNÇÃO MAP
 */
-app.get("/dobros/:inicio/:fim", (req, res) => {
+app.get("/dobrar/:inicio/:fim", (req, res) => {
   const inicio = parseInt(req.params.inicio, 10);
   const fim = parseInt(req.params.fim, 10);
 
