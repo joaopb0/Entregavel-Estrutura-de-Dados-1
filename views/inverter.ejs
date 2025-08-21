@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+  <meta charset="UTF-8">
+  <title>Inverter</title>
+  <link rel="stylesheet" href="/stylesheet.css">
+</head>
+  <body>
+    <input type="text" id="inverter" />
+    <button id="enviar">Inverter</button>
+    <script>
+      const inverter = document.querySelector("#inverter");
+      const enviar = document.querySelector("#enviar");
+      enviar.onclick = async () => {
+        const res = await fetch(`/api/inverter/${inverter.value}`);
+        const invertido = await res.json();
+        alert(invertido);
+      };
+    </script>
+  </body>
+</html>
